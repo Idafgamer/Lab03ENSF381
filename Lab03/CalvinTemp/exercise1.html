@@ -51,6 +51,32 @@
         }
 
     // Ex E
+        let now = new Date();
+
+        console.log(now.toLocaleDateString("en-CA"));
+        console.log(now.toLocaleDateString("en-US"));
+
+        const year = now.getFullYear();
+        console.log(year);
+
+        const monthNumber = now.getMonth();
+        console.log(monthNumber);
+
+        const weekdayName = now.toLocaleDateString("en-CA", { weekday: "long" });
+        console.log(weekdayName);
+
+        // Get season from month
+        let season;
+        if (monthNumber <= 1 || monthNumber == 11)
+            season = "Winter";
+        else if (monthNumber >= 2 && monthNumber <= 4)
+            season = "Spring";
+        else if (monthNumber >= 5 && monthNumber <= 7)
+            season = "Summer";
+        else
+            season = "Fall";
+
+        console.log(season);
 
     </script>
 </body>
