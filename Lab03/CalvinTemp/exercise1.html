@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3 -- Exercise 1</title>
+</head>
+<body>
+    <h1>JavaScript Lab Exercise 1</h1>
+    <script>
+    // Ex 1
+
+        let letVariable = 1;
+        const constVariable = 2;
+        
+        letVariable = 3;
+
+        try {
+            constVariable = 4;
+        }
+        catch {
+            console.log("Error: cannot reassign const");
+        }
+
+
+    // Ex 2
+        let string1 = "Hello, World!";
+        let string2 = "JavaScript is fun!";
+
+        console.log("The length of string1 is: ", string1);
+
+        let stringCat = string1.concat(string2);
+        console.log(stringCat);
+
+        let string3 = string2.replace("fun", "awesome");
+        console.log(string3);
+
+    </script>
+</body>
+</html>
