@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Lab3 -- Exercise 1</title> 
+</head> 
+ 
+<body> 
+    <h1>JavaScript Lab Exercise 1</h1> 
+    <script> 
+        // Exercise 1A
+        // Step 1
+        var one = 1;
+        let two = 2;
+        const THREE = 3;
+
+        // Step 2
+        two = 4;
+        console.log(two);
+
+        // Step 3 and 4
+        try{
+            THREE = 4;
+        }
+        catch{
+            console.log("Error: cannot reassign const")
+        }
+            
+        // Exercise 1B
+        let string1 = "Hello, World!"
+        let string2 = "JavaScript is fun!"
+
+        // Step 2
+        let stringlen = string1.length;
+        console.log(stringlen);
+        
+        // Step 3
+        let concatString = string1.concat(string2);
+        console.log(concatString);
+
+        // Step 4
+        let string3 = string2.replace("fun", "awesome");
+        console.log(string3);
+
+        // Exercise 1C
+        let name = "Alice";
+        let age = 25;
+        
+        // Step 2
+        const TEMPLATE = `My name is ${name} and I am ${age} years old`;
+        // Step 3
+        console.log(TEMPLATE); 
+
+
+        // Exercise 1D
+        const students = ["Alice", "Tom", "Charlie"]
+        const ages = [19, 21, 20]
+
+        for(let i = 0; i< students.length; i++){
+            let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old`;
+            console.log(studentInfo);    
+        }
+
+        // Exercise 1E
+        let currentDate = new Date();
+        let dateCA = currentDate.toLocaleDateString('en-CA');
+        let dateUS = currentDate.toLocaleDateString('en-US');
+        
+        console.log("The date is in en-CA format: " + dateCA);
+        console.log("The date is in en-CA format: " + dateUS);
+
+        let year = currentDate.getFullYear();
+        console.log(year);
+
+        let month = currentDate.getMonth();
+        console.log(month);
+
+        const weekdayName = currentDate.toLocaleDateString("en-CA", {weekday: "long"})
+        console.log(weekdayName);
+
+        const winter = [11,0,1];
+        const spring = [11,0,1];
+        const summer = [11,0,1];
+        const fall = [11,0,1];
+
+        console.log("The season is...")
+        if (month in winter){
+            console.log("Winter")
+        }else if (month in spring){
+            console.log("Spring")
+        } else if (month in summer){
+            console.log("Summer")
+        } else if (month in fall){
+            console.log("Fall")
+        }
+
+        
+    </script> 
+</body> 
+ 
+</html> 
